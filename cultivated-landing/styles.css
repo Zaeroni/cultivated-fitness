@@ -294,31 +294,7 @@ a{color:inherit;text-decoration:none}
 .card h3{margin:0 0 10px}
 .card p{margin:0;color: rgba(185,192,204,.92); line-height:1.7}
 
-/* PRICING */
-.priceLine{
-  margin:2px 0 10px;
-  display:flex;
-  align-items:baseline;
-  gap:10px;
-}
-.priceBig{
-  font-size:28px;
-  font-weight:950;
-  letter-spacing:-.4px;
-  color:#fff;
-}
-.pricingRow{
-  margin-top:14px;
-  display:grid;
-  gap:14px;
-  grid-template-columns:1fr 1fr;
-}
-.pricingList{
-  margin:12px 0 0;
-  padding-left:18px;
-  color: rgba(185,192,204,.92);
-  line-height:1.7;
-}
+
 
 /* SCHEDULE */
 .scheduleGrid{
@@ -462,4 +438,9 @@ select{
   font-weight: 900;
   font-size: 18px;
   letter-spacing: .4px;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }

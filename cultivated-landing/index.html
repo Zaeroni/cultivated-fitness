@@ -28,7 +28,6 @@
     </nav>
 
     <div class="topbar__actions">
-      <a class="btn btn--ghost" href="#pricing">View Pricing</a>
       <a class="btn btn--gold" href="#contact">Book a Free Intro</a>
     </div>
   </div>
@@ -73,7 +72,7 @@
         <div class="photoCard__inner">
           <div class="carousel" aria-label="Swipeable photos">
             <div class="carousel__track" id="photoTrack">
-              <!-- Replace these src values with your real photo filenames -->
+              <!-- Filenames -->
               <div class="carousel__slide">
                 <img class="carousel__img" src="logo.png" alt="Cultivated Fitness photo 1" />
               </div>
@@ -102,28 +101,34 @@
 
     <!-- PROGRAMS -->
     <div class="block" id="programs">
-      <div class="blockHead">
-        <h2 class="blockTitle">Programs</h2>
-      </div>
+  <div class="blockHead">
+    <h2 class="blockTitle">Programs</h2>
+  </div>
 
-      <div class="grid3">
-        <div class="card">
-          <h3>In-Home Training</h3>
-          <p>We come to you. Structured sessions built for strength, movement quality, and consistency.</p>
-        </div>
+  <div class="grid3">
 
-        <div class="card">
-          <h3>Strength + Conditioning</h3>
-          <p>Progressive overload + athletic conditioning so you look better, move better, and perform.</p>
-        </div>
-
-        <div class="card">
-          <h3>Coaching + Accountability</h3>
-          <p>Clear plan, weekly check-ins, and support so you stay locked in long-term.</p>
-        </div>
-      </div>
+    <div class="card">
+      <h3>In-Home Training</h3>
+      <p>We come to you. Structured sessions built for strength, movement quality, and consistency.</p>
     </div>
 
+    <div class="card">
+      <h3>Strength + Conditioning</h3>
+      <p>Progressive overload + athletic conditioning so you look better, move better, and perform.</p>
+    </div>
+
+    <div class="card">
+      <h3>Corrective Exercise Training</h3>
+      <p>Helping to rebuild mobility, balance, and strength.</p>
+    </div>
+
+    <div class="card">
+      <h3>Coaching + Accountability</h3>
+      <p>Clear plan, weekly check-ins, and support so you stay locked in long-term.</p>
+    </div>
+
+  </div>
+</div>
     <!-- SCHEDULE -->
 <div class="block" id="schedule">
   <div class="blockHead">
@@ -351,7 +356,7 @@
     track.scrollBy({ left: slideWidth(), behavior: "smooth" });
   });
 
-  // ===== SATURDAY TIME FILTER (REBUILD OPTIONS) =====
+  // ===== SATURDAY TIME FILTER  =====
   const daySelect = document.getElementById("daySelect");
   const timeSelect = document.getElementById("timeSelect");
 
@@ -374,7 +379,7 @@
   function setTimeOptions(times) {
     if (!timeSelect) return;
 
-    // Keep placeholder (value="") then rebuild everything else
+    //  placeholder 
     const placeholder =
       timeSelect.querySelector('option[value=""]') || timeSelect.options[0];
 
