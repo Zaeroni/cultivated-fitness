@@ -212,43 +212,49 @@ a{color:inherit;text-decoration:none}
 .carousel{
   position:relative;
 }
+
 .carousel__track{
   display:grid;
   grid-auto-flow:column;
   grid-auto-columns:100%;
   gap:12px;
-
   overflow-x:auto;
   scroll-snap-type:x mandatory;
   scroll-behavior:smooth;
   -webkit-overflow-scrolling: touch;
 
-  border-radius:20px;
-  padding:6px;
-
+  border-radius:24px;
+  padding:8px;
   background: linear-gradient(180deg, rgba(17,24,39,.55), rgba(7,7,13,.45));
   border:1px solid rgba(255,255,255,.08);
 }
+
 .carousel__slide{
   scroll-snap-align:center;
-  border-radius:18px;
+  border-radius:20px;
   overflow:hidden;
+  background: #0b0f19;
 }
+
 .carousel__img{
   width:100%;
-  height:360px;
-  object-fit:cover;
+  height:440px;
   display:block;
-  border-radius:18px;
-  box-shadow: var(--shadow2);
+  object-fit:cover;
+  object-position:center 30%;
+}
+
+/* Special positioning for Q */
+.carousel__img--q{
+  object-position:center 12%;
 }
 
 .carousel__btn{
   position:absolute;
   top:50%;
   transform:translateY(-50%);
-  width:40px;
-  height:40px;
+  width:44px;
+  height:44px;
   border-radius:999px;
   border:1px solid rgba(255,255,255,.12);
   background: rgba(7,7,13,.55);
@@ -260,39 +266,15 @@ a{color:inherit;text-decoration:none}
   justify-content:center;
   cursor:pointer;
   backdrop-filter: blur(12px);
+  z-index:2;
 }
+
 .carousel__btn:hover{
   background: rgba(255,255,255,.08);
 }
-.carousel__btn--prev{left:10px}
-.carousel__btn--next{right:10px}
 
-/* CONTENT BLOCKS */
-.block{
-  padding:34px 0;
-  background: transparent !important;
-  border:0 !important;
-}
-.blockHead{margin-bottom:16px}
-.blockTitle{margin:0 0 8px;font-size:28px;letter-spacing:-.3px}
-.muted{color:var(--muted)}
-.small{font-size:12px}
-
-/* CARDS + GRID */
-.grid3{
-  display:grid;gap:14px;
-  grid-template-columns:repeat(3, minmax(0, 1fr));
-}
-.card{
-  background: rgba(17,24,39,.62);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:20px;
-  padding:18px;
-  box-shadow: var(--shadow2);
-  backdrop-filter: blur(14px);
-}
-.card h3{margin:0 0 10px}
-.card p{margin:0;color: rgba(185,192,204,.92); line-height:1.7}
+.carousel__btn--prev{ left:14px; }
+.carousel__btn--next{ right:14px; }
 
 
 

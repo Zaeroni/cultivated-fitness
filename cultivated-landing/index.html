@@ -66,37 +66,44 @@
         </div>
       </div>
 
-      <!-- PHOTO CAROUSEL (swipeable) -->
-      <aside class="photoCard" aria-label="Photos">
-        <div class="photoCard__inner">
-          <div class="carousel" aria-label="Swipeable photos">
-            <div class="carousel__track" id="photoTrack">
-              <!-- Filenames -->
-              <div class="carousel__slide">
-                <img class="carousel__img" src="logo.png" alt="Cultivated Fitness photo 1" />
-              </div>
-              <div class="carousel__slide">
-                <img class="carousel__img" src="group.png" alt="Cultivated Fitness photo 2" />
-              </div>
-              <div class="carousel__slide">
-                <img class="carousel__img" src="run.png" alt="Cultivated Fitness photo 3" />
-              </div>
-            </div>
+     <!-- PHOTO CAROUSEL (swipeable) -->
+<aside class="photoCard" aria-label="Photos">
+  <div class="photoCard__inner">
+    <div class="carousel" aria-label="Swipeable photos">
+      <div class="carousel__track" id="photoTrack">
 
-            <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Previous photo" id="photoPrev">
-              ‹
-            </button>
-            <button class="carousel__btn carousel__btn--next" type="button" aria-label="Next photo" id="photoNext">
-              ›
-            </button>
-          </div>
-
-          <div class="photoCard__caption muted">
-            Swipe through client and trainer photos.
-          </div>
+        <!-- Photo 1 -->
+        <div class="carousel__slide">
+          <img class="carousel__img" src="logo.png" alt="Cultivated Fitness photo 1" />
         </div>
-      </aside>
+
+        <!-- Photo 2 (Q) -->
+        <div class="carousel__slide">
+          <img class="carousel__img carousel__img--q" src="q.png" alt="Cultivated Fitness photo 2" />
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="carousel__slide">
+          <img class="carousel__img" src="run.png" alt="Cultivated Fitness photo 3" />
+        </div>
+
+      </div>
+
+      <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Previous photo" id="photoPrev">
+        ‹
+      </button>
+
+      <button class="carousel__btn carousel__btn--next" type="button" aria-label="Next photo" id="photoNext">
+        ›
+      </button>
+
     </div>
+
+    <div class="photoCard__caption muted">
+      Swipe through client and trainer photos.
+    </div>
+  </div>
+</aside>
 
     <!-- PROGRAMS -->
     <div class="block" id="programs">
