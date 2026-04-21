@@ -6,509 +6,537 @@
   <title>Cultivated Fitness</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <header class="topbar" id="top">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="Cultivated Fitness home">
+        <img class="brand__logo" src="logo.png" alt="Cultivated Fitness logo" />
+        <div class="brand__stack">
+          <div class="brand__name">CULTIVATED FITNESS</div>
+          <div class="brand__tag">Strength • Discipline • Growth</div>
+        </div>
+      </a>
 
-<header class="topbar" id="top">
-  <div class="container topbar__inner">
-    <a class="brand" href="#top">
-      <img class="brand__logo" src="logo.png" alt="Cultivated Fitness logo" />
-      <div class="brand__stack">
-        <div class="brand__name">CULTIVATED FITNESS</div>
-        <div class="brand__tag">Strength • Discipline • Growth</div>
+      <nav class="nav" aria-label="Primary">
+        <a href="#method">Method</a>
+        <a href="#coach">Coach</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Start</a>
+      </nav>
+
+      <div class="topbar__actions">
+        <a class="btn btn--gold" href="#contact">Start Your Transformation</a>
       </div>
-    </a>
-
-    <nav class="nav" aria-label="Primary">
-      <a href="#programs">Programs</a>
-      <a href="#schedule">Schedule</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#results">Results</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="topbar__actions">
-      <a class="btn btn--gold" href="#contact">Book a Free Intro</a>
     </div>
-  </div>
-</header>
+  </header>
 
-<main class="page">
-  <div class="container">
-
-    <!-- HERO -->
-    <div class="heroGrid">
-      <div class="heroLeft">
-        <div class="pill">
-          <span class="pill__dot"></span>
-          <span>Faith-forward community • “Colossians 1:17” foundation</span>
+  <main class="page">
+    <section class="hero">
+      <div class="container heroGrid">
+        <div class="heroCopy">
+          <div class="eyebrow">
+            <span class="eyebrow__dot"></span>
+            Coaching for adults 30+ who want lasting change
+          </div>
+          <h1 class="heroTitle">Lose Weight. Move Better. Build a Body That Lasts.</h1>
+          <p class="heroSub">For men and women 30+ who are tired of starting over and ready for real, lasting results.</p>
+          <div class="heroActions">
+            <a class="btn btn--gold btn--large" href="#contact">Start Your Transformation</a>
+          </div>
+          <p class="heroNote">Limited spots available for new clients</p>
         </div>
 
-        <h1 class="heroTitle">
-          Cultivate Discipline, Strength, and Longevity.<br/>
-        </h1>
-
-        <p class="heroSub">
-          Cultivated Fitness is where disciplined training meets real community.
-          Whether you’re brand new or leveling up, we’ll help you get stronger,
-          move better, and stay consistent.
-        </p>
-
-        <div class="heroCta">
-          <a class="btn btn--gold" href="#contact">Start Your Free Intro</a>
-          <a class="btn btn--ghost" href="#programs">Explore Programs</a>
-        </div>
-
-        <div class="chips" aria-label="Highlights">
-          <div class="chip">60 min sessions</div>
-          <div class="chip">Strength + Conditioning</div>
-          <div class="chip">Coaching + Accountability</div>
-        </div>
-      </div>
-
-           <!-- PHOTO CAROUSEL (swipeable) -->
-      <aside class="photoCard" aria-label="Photos">
-        <div class="photoCard__inner">
-          <div class="carousel" aria-label="Swipeable photos">
-            <div class="carousel__track" id="photoTrack">
-
-              <!-- Photo 1 -->
-              <div class="carousel__slide">
-                <img class="carousel__img" src="logo.png" alt="Cultivated Fitness photo 1" />
-              </div>
-
-              <!-- Photo 2 (Q) -->
-              <div class="carousel__slide">
-                <img class="carousel__img carousel__img--q" src="q.png" alt="Cultivated Fitness photo 2" />
-              </div>
-
-              <!-- Photo 3 -->
-              <div class="carousel__slide">
-                <img class="carousel__img" src="run.png" alt="Cultivated Fitness photo 3" />
-              </div>
-
+        <aside class="heroVisual" aria-label="Cultivated Fitness highlights">
+          <div class="heroVisual__media">
+            <video src="fitad.mov" autoplay loop playsinline controls></video>
+          </div>
+          <div class="heroVisual__panel">
+            <div class="heroStat">
+              <strong>Strength</strong>
+              <span>Progressive coaching built for real life</span>
             </div>
+            <div class="heroStat">
+              <strong>Mobility</strong>
+              <span>Move with less stiffness and more confidence</span>
+            </div>
+            <div class="heroStat">
+              <strong>Consistency</strong>
+              <span>Structure that helps your results stay</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-            <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Previous photo" id="photoPrev">
-              ‹
-            </button>
-            <button class="carousel__btn carousel__btn--next" type="button" aria-label="Next photo" id="photoNext">
-              ›
-            </button>
+    <section class="section section--feature" id="mindset">
+      <div class="container splitCard">
+        <div>
+          <p class="sectionLabel">You’re Not Starting Over… You’re Starting Smarter</p>
+          <h2>If your old approach stopped working, that does not mean you failed.</h2>
+        </div>
+        <div class="stackedCopy">
+          <p>If you’re 30 or older, you’ve probably noticed something…</p>
+          <p>What used to work doesn’t work the same anymore.</p>
+          <p>The weight is harder to lose. Your body feels tighter. Your energy isn’t where it used to be.</p>
+          <p>And no matter how many times you start, you end up right back where you were.</p>
+          <p>Not because you lack discipline…</p>
+          <p>But because you’ve never had a system built for your life.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tried">
+      <div class="container">
+        <div class="sectionHead">
+          <p class="sectionLabel">You’ve Tried Everything</p>
+          <h2>The problem was never effort. It was the wrong structure.</h2>
+        </div>
+        <div class="cardGrid cardGrid--two">
+          <article class="infoCard">
+            <ul class="list">
+              <li>Diets that didn’t last</li>
+              <li>Workout plans that weren’t sustainable</li>
+              <li>Fitness influencers with no real structure</li>
+              <li>Starting and stopping over and over again</li>
+              <li>Quick fixes that didn’t create real change</li>
+            </ul>
+            <p class="closingLine">And you’re done wasting time on things that don’t work.</p>
+          </article>
+          <article class="infoCard infoCard--image">
+            <img src="FF.png" alt="Cultivated Fitness training session" />
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--muted" id="goals">
+      <div class="container">
+        <div class="sectionHead">
+          <p class="sectionLabel">What You Really Want</p>
+          <h2>Results you can feel in your body and maintain in your life.</h2>
+        </div>
+        <div class="cardGrid cardGrid--three">
+          <article class="infoCard">
+            <ul class="list">
+              <li>To lose weight and keep it off</li>
+              <li>To move without stiffness or pain</li>
+              <li>To have consistent energy throughout the day</li>
+            </ul>
+          </article>
+          <article class="infoCard">
+            <ul class="list">
+              <li>To sleep better and recover properly</li>
+              <li>To feel confident in your body again</li>
+              <li>To build a lifestyle you can actually maintain</li>
+            </ul>
+          </article>
+          <article class="quoteCard">
+            <p>Real transformation does not come from doing more. It comes from finally doing what fits.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="method">
+      <div class="container methodCard">
+        <div class="sectionHead sectionHead--left">
+          <p class="sectionLabel">The Cultivated Fitness Method</p>
+          <h2>This is not a quick-fix program.</h2>
+        </div>
+        <p class="lead">This is a structured coaching system designed to help you rebuild your body the right way through strength, mobility, and consistency.</p>
+        <p class="lead lead--tight">No extremes. No burnout. No guessing.</p>
+        <p class="lead lead--tight">Just a clear plan that works.</p>
+      </div>
+    </section>
+
+    <section class="section section--feature" id="offer">
+      <div class="container">
+        <div class="sectionHead">
+          <p class="sectionLabel">What You Get</p>
+          <h2>Coaching built around your body, your goals, and your real schedule.</h2>
+        </div>
+        <div class="cardGrid cardGrid--three">
+          <article class="infoCard">
+            <ul class="list">
+              <li>2–3 60-minute training sessions per week</li>
+              <li>Personalized programming based on your body and goals</li>
+            </ul>
+          </article>
+          <article class="infoCard">
+            <ul class="list">
+              <li>Mobility training to improve how your body moves</li>
+              <li>Strength training to rebuild and reshape your body</li>
+            </ul>
+          </article>
+          <article class="infoCard">
+            <ul class="list">
+              <li>Accountability coaching to keep you consistent</li>
+              <li>Ongoing adjustments as you progress</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="difference">
+      <div class="container">
+        <div class="sectionHead">
+          <p class="sectionLabel">Why This Works When Others Didn’t</p>
+          <h2>Because it is designed for the season of life you are actually in.</h2>
+        </div>
+        <div class="pillGrid">
+          <div class="pillCard">Built specifically for adults 30+</div>
+          <div class="pillCard">Focus on mobility, not just appearance</div>
+          <div class="pillCard">Designed for real life, not extreme routines</div>
+          <div class="pillCard">Structured for long-term results</div>
+          <div class="pillCard">Coaching that keeps you consistent</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--muted" id="results">
+      <div class="container">
+        <div class="sectionHead">
+          <p class="sectionLabel">What Happens When You Stay Consistent</p>
+          <h2>With consistency, you will begin to see:</h2>
+        </div>
+        <div class="cardGrid cardGrid--three">
+          <article class="resultCard"><span>Increased strength</span></article>
+          <article class="resultCard"><span>Noticeable fat loss</span></article>
+          <article class="resultCard"><span>Improved mobility and flexibility</span></article>
+          <article class="resultCard"><span>Better sleep and recovery</span></article>
+          <article class="resultCard"><span>More energy throughout the day</span></article>
+          <article class="resultCard"><span>A more disciplined lifestyle</span></article>
+        </div>
+        <p class="sectionStatement"><strong>This is transformation that stays.</strong></p>
+      </div>
+    </section>
+
+    <section class="section" id="coach">
+      <div class="container coachCard">
+        <div class="coachCard__media">
+          <img src="q.png" alt="Cultivated Fitness coach and clients" />
+        </div>
+        <div class="coachCard__content">
+          <p class="sectionLabel">Meet Your Coach</p>
+          <h2>I’m Coach Q, founder of Cultivated Fitness.</h2>
+          <p>I help men and women 30+ rebuild their strength, restore mobility, and create sustainable health habits that actually last.</p>
+          <p>This isn’t about quick wins.</p>
+          <p>It’s about structure, discipline, and creating real transformation in your body and your life.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--feature" id="testimonials">
+      <div class="container">
+        <div class="sectionHead">
+          <p class="sectionLabel">Real Results. Real Growth. Real Consistency.</p>
+          <h2>Stories from clients who stayed the course.</h2>
+        </div>
+        <div class="cardGrid cardGrid--three">
+          <article class="testimonial">
+            <p class="testimonial__eyebrow">Gained strength, confidence, and consistency</p>
+            <p class="testimonial__text">“From day one, Coach Q met me where I was and steadily helped me build strength, confidence, and consistency. Her ability to encourage without pressure and challenge without intimidation is a rare gift. On days when motivation was low, she showed up with energy and belief. On days when progress felt slow, she reminded me of how far I’d come. That steady support made all the difference.”</p>
+            <p class="testimonial__name">— Leslie D.</p>
+          </article>
+          <article class="testimonial">
+            <p class="testimonial__eyebrow">Experienced real transformation in just weeks</p>
+            <p class="testimonial__text">“As my personal trainer, Q brought patience, experience, skill, knowledge, and God-given wisdom. I am not the same woman I was when we started working together just 11 or so weeks ago. More importantly, she brought God’s love and care to each session. She was always rooting for me to WIN! If you’re looking for someone who has an anointing for personal training, then look no further.”</p>
+            <p class="testimonial__name">— Felicia V.</p>
+          </article>
+          <article class="testimonial">
+            <p class="testimonial__text">“I 10/10 recommend Q and her expertise as a fitness General in the earth straight from heaven. As a mature woman of age Q was able to meet my needs both spiritually and physically and marry the two. Where my mind was weak and I didn’t feel physically strong she encouraged me, made reasonable accommodations, and created a safe space to grow in my physical fitness.”</p>
+            <p class="testimonial__name">— LaTyna J.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container">
+        <div class="sectionHead">
+          <p class="sectionLabel">How It Works</p>
+          <h2>A simple path from consultation to lasting change.</h2>
+        </div>
+        <div class="steps">
+          <article class="stepCard">
+            <span class="stepCard__number">1</span>
+            <h3>Book your consultation</h3>
+          </article>
+          <article class="stepCard">
+            <span class="stepCard__number">2</span>
+            <h3>Get assessed and receive your plan</h3>
+          </article>
+          <article class="stepCard">
+            <span class="stepCard__number">3</span>
+            <h3>Train 2–3 times per week</h3>
+          </article>
+          <article class="stepCard">
+            <span class="stepCard__number">4</span>
+            <h3>Progress as your body improves</h3>
+          </article>
+          <article class="stepCard">
+            <span class="stepCard__number">5</span>
+            <h3>Build a lifestyle that lasts</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--muted" id="faith">
+      <div class="container faithCard">
+        <div class="sectionHead sectionHead--left">
+          <p class="sectionLabel">More Than Fitness</p>
+          <h2>Discipline, growth, and purpose are part of the foundation.</h2>
+        </div>
+        <p>Cultivated Fitness is built on a foundation of discipline, growth, and purpose.</p>
+        <p>For those who desire it, this is also a faith-forward environment rooted in truth, accountability, and walking in alignment: spirit, soul, and body.</p>
+      </div>
+    </section>
+
+    <section class="section finalCta" id="contact">
+      <div class="container finalCta__grid">
+        <div class="finalCta__copy">
+          <p class="sectionLabel">Your Body Is Waiting On Your Decision</p>
+          <h2>You can keep starting over…</h2>
+          <p class="lead lead--tight">Or you can finally commit to something that works.</p>
+          <a class="btn btn--gold btn--large" href="#bookingForm">Start Your Transformation</a>
+          <p class="heroNote">Spots are limited to ensure quality coaching</p>
+        </div>
+
+        <form
+          class="form"
+          id="bookingForm"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <h3 class="form__title">Start Your Transformation</h3>
+          <p class="form__sub">Submit your information and we’ll follow up with next steps and current availability.</p>
+
+          <input type="hidden" name="access_key" value="e3e63e18-a07f-4fd4-96ae-b7d9f74f8344" />
+          <input type="hidden" name="subject" value="Cultivated Fitness Booking Request" />
+          <input type="hidden" name="from_name" value="Cultivated Fitness Landing Page" />
+
+          <div class="row">
+            <label>
+              Full Name
+              <input type="text" name="name" required autocomplete="name" />
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" required autocomplete="email" />
+            </label>
           </div>
 
-          <div class="photoCard__caption muted">
-            Swipe through client and trainer photos.
+          <div class="row">
+            <label>
+              Phone
+              <input type="tel" name="phone" autocomplete="tel" />
+            </label>
+
+            <label>
+              Preferred Day
+              <select name="day" id="daySelect" required>
+                <option value="" selected disabled>Select</option>
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Saturday</option>
+              </select>
+            </label>
           </div>
-        </div>
-      </aside>
-    </div> 
 
-    <!-- PROGRAMS -->
-    <div class="block" id="programs">
-  <div class="blockHead">
-    <h2 class="blockTitle">Programs</h2>
-  </div>
-
-  <div class="grid3">
-
-    <div class="card">
-      <h3>In-Home Training</h3>
-      <p>We come to you. Structured sessions built for strength, movement quality, and consistency.</p>
-    </div>
-
-    <div class="card">
-      <h3>Strength + Conditioning</h3>
-      <p>Progressive overload + athletic conditioning so you look better, move better, and perform.</p>
-    </div>
-
-    <div class="card">
-      <h3>Corrective Exercise Training</h3>
-      <p>Helping to rebuild mobility, balance, and strength.</p>
-    </div>
-
-    <div class="card">
-      <h3>Coaching + Accountability</h3>
-      <p>Clear plan, weekly check-ins, and support so you stay locked in long-term.</p>
-    </div>
-
-  </div>
-</div>
-    <!-- SCHEDULE -->
-<div class="block" id="schedule">
-  <div class="blockHead">
-    <h2 class="blockTitle">Schedule</h2>
-    <p class="muted">
-      Mon–Thu time slots. Saturday availability listed below.
-      30 minutes between sessions is reserved for commuting.
-    </p>
-  </div>
-
-  <!-- MON–THU -->
-  <h3 class="scheduleDay">Monday – Thursday</h3>
-  <div class="scheduleGrid" aria-label="Weekday time slots">
-    <div class="slot">7:00–8:00 AM</div>
-    <div class="slot">8:30–9:30 AM</div>
-    <div class="slot">10:00–11:00 AM</div>
-    <div class="slot">11:30–12:30 PM</div>
-    <div class="slot">2:30–3:30 PM</div>
-    <div class="slot">4:00–5:00 PM</div>
-    <div class="slot">5:30–6:30 PM</div>
-  </div>
-
-  <!-- SATURDAY -->
-  <h3 class="scheduleDay" style="margin-top:28px;">Saturday</h3>
-  <div class="scheduleGrid" aria-label="Saturday time slots">
-    <div class="slot">8:00–9:00 AM</div>
-    <div class="slot">9:30–10:30 AM</div>
-    <div class="slot">11:00–12:00 PM</div>
-  </div>
-</div>
-
-    <!-- TESTIMONIALS -->
-<div class="block" id="testimonials">
-  <div class="blockHead">
-    <h2 class="blockTitle">Client Testimonials</h2>
-    <p class="muted">Real results. Real growth. Real community.</p>
-  </div>
-
-  <div class="grid3">
-
-    <div class="card testimonial">
-      <p class="testimonial__text">
-        “From day one, Coach Q met me where I was and steadily helped me build strength,
-        confidence, and consistency. Her ability to encourage without pressure and challenge
-        without intimidation is a rare gift. On days when motivation was low, she showed up
-        with energy and belief. On days when progress felt slow, she reminded me of how far
-        I’d come. That steady support made all the difference.”
-      </p>
-      <p class="testimonial__name">— Leslie D.</p>
-    </div>
-
-    <div class="card testimonial">
-      <p class="testimonial__text">
-        “As my personal trainer, Q brought patience, experience, skill, knowledge,
-        and God-given wisdom. I am not the same woman I was when we started working
-        together just 11 or so weeks ago. More importantly, she brought God’s love and
-        care to each session. She was always rooting for me to WIN! If you’re looking
-        for someone who has an anointing for personal training, then look no further.”
-      </p>
-      <p class="testimonial__name">— Felicia V.</p>
-    </div>
-
-    <div class="card testimonial">
-      <p class="testimonial__text">
-        “I 10/10 recommend Q and her expertise as a fitness General in the earth
-        straight from heaven. As a mature woman of age Q was able to meet my needs
-        both spiritually and physically and marry the two. Where my mind was weak and
-        I didn’t feel physically strong she encouraged me, made reasonable accommodations,
-        and created a safe space to grow in my physical fitness.”
-      </p>
-      <p class="testimonial__name">— LaTyna J.</p>
-    </div>
-
-  </div>
-</div>
-
-    <!-- RESULTS -->
-    <div class="block" id="results">
-      <div class="blockHead">
-        <h2 class="blockTitle">Results</h2>
-      </div>
-
-      <div class="grid3">
-        <div class="card resultCard">
-          <h3>Stronger</h3>
-          <p>Progressive strength work you can feel week to week.</p>
-        </div>
-        <div class="card resultCard">
-          <h3>Leaner</h3>
-          <p>Training + consistency that moves the needle.</p>
-        </div>
-        <div class="card resultCard">
-          <h3>More Confident</h3>
-          <p>Structure and accountability that sticks.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- CONTACT / FORM -->
-    <div class="block" id="contact">
-      <div class="blockHead">
-        <h2 class="blockTitle">Book a Free Intro</h2>
-        <p class="muted">Submit your info and we’ll reach out to confirm your slot.</p>
-      </div>
-
-      <!-- Web3Forms  -->
-      <form
-        class="form"
-        id="bookingForm"
-        action="https://api.web3forms.com/submit"
-        method="POST"
-      >
-        <!-- Web3Forms -->
-        <input type="hidden" name="access_key" value="e3e63e18-a07f-4fd4-96ae-b7d9f74f8344" />
-        <input type="hidden" name="subject" value="Cultivated Fitness Booking Request" />
-        <input type="hidden" name="from_name" value="Cultivated Fitness Landing Page" />
-
-        <div class="row">
           <label>
-            Full Name
-            <input type="text" name="name" required autocomplete="name" />
+            Training Address
+            <input type="text" name="address" autocomplete="street-address" />
           </label>
 
           <label>
-            Email
-            <input type="email" name="email" required autocomplete="email" />
-          </label>
-        </div>
-
-        <div class="row">
-          <label>
-            Phone
-            <input type="tel" name="phone" autocomplete="tel" />
-          </label>
-
-          <label>
-            Preferred Day
-            <select name="day" id= "daySelect" required>
+            Preferred Time
+            <select name="time" id="timeSelect" required>
               <option value="" selected disabled>Select</option>
-              <option>Monday</option>
-              <option>Tuesday</option>
-              <option>Wednesday</option>
-              <option>Thursday</option>
-              <option>Saturday</option>
+              <option data-day="weekday">7:00–8:00 AM</option>
+              <option data-day="weekday">8:30–9:30 AM</option>
+              <option data-day="weekday">10:00–11:00 AM</option>
+              <option data-day="weekday">11:30–12:30 PM</option>
+              <option data-day="weekday">2:30–3:30 PM</option>
+              <option data-day="weekday">4:00–5:00 PM</option>
+              <option data-day="weekday">5:30–6:30 PM</option>
+              <option data-day="saturday">8:00–9:00 AM</option>
+              <option data-day="saturday">9:30–10:30 AM</option>
+              <option data-day="saturday">11:00–12:00 PM</option>
             </select>
           </label>
-        </div>
 
-        <label>
-          Training Address
-          <input type="text" name="address" autocomplete="street-address" />
-        </label>
+          <label>
+            Notes (optional)
+            <textarea name="notes" rows="4" placeholder="Goals, injuries, experience level, etc."></textarea>
+          </label>
 
-        <label>
-          Preferred Time
-          <select name="time" id="timeSelect" required>
-  <option value="" selected disabled>Select</option>
-
-  <!-- Weekday Times -->
-  <option data-day="weekday">7:00–8:00 AM</option>
-  <option data-day="weekday">8:30–9:30 AM</option>
-  <option data-day="weekday">10:00–11:00 AM</option>
-  <option data-day="weekday">11:30–12:30 PM</option>
-  <option data-day="weekday">2:30–3:30 PM</option>
-  <option data-day="weekday">4:00–5:00 PM</option>
-  <option data-day="weekday">5:30–6:30 PM</option>
-
-  <!-- Saturday Times -->
-  <option data-day="saturday">8:00–9:00 AM</option>
-  <option data-day="saturday">9:30–10:30 AM</option>
-  <option data-day="saturday">11:00–12:00 PM</option>
-</select>
-        </label>
-
-        <label>
-          Notes (optional)
-          <textarea name="notes" rows="4" placeholder="Goals, injuries, experience level, etc."></textarea>
-        </label>
-
-        <button class="btn btn--gold btn--full" type="submit">Send Request</button>
-        <p id="status" class="muted small" aria-live="polite"></p>
-      </form>
-      <div class="supplementBar">
-  <a 
-    href="https://QuishaDarcus.isagenix.com" 
-    target="_blank" 
-    rel="noopener"
-    class="btn btn--gold supplementBtn"
-  >
-    Need Supplements?
-  </a>
-</div>
-    </div>
+          <button class="btn btn--gold btn--full" type="submit">Start Your Transformation</button>
+          <p class="form__note">Full scheduling details are shared after consultation so coaching stays personalized.</p>
+          <p id="status" class="muted small" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
 
     <footer class="footer">
-      <div class="footerInner">
+      <div class="container footerInner">
         <div>© <span id="year"></span> Cultivated Fitness</div>
         <a class="muted" href="#top">Back to top ↑</a>
       </div>
     </footer>
+  </main>
 
-  </div>
-</main>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+    const daySelect = document.getElementById("daySelect");
+    const timeSelect = document.getElementById("timeSelect");
 
-  // ===== PHOTO CAROUSEL BUTTONS =====
-  const track = document.getElementById("photoTrack");
-  const prevBtn = document.getElementById("photoPrev");
-  const nextBtn = document.getElementById("photoNext");
+    const weekdayTimes = [
+      "7:00–8:00 AM",
+      "8:30–9:30 AM",
+      "10:00–11:00 AM",
+      "11:30–12:30 PM",
+      "2:30–3:30 PM",
+      "4:00–5:00 PM",
+      "5:30–6:30 PM"
+    ];
 
-  function slideWidth() {
-    const first = track?.querySelector(".carousel__slide");
-    if (!first) return 0;
-    const gap = parseFloat(getComputedStyle(track).columnGap || "0") || 0;
-    return first.getBoundingClientRect().width + gap;
-  }
+    const saturdayTimes = [
+      "8:00–9:00 AM",
+      "9:30–10:30 AM",
+      "11:00–12:00 PM"
+    ];
 
-  prevBtn?.addEventListener("click", () => {
-    track.scrollBy({ left: -slideWidth(), behavior: "smooth" });
-  });
+    function setTimeOptions(times) {
+      if (!timeSelect) return;
 
-  nextBtn?.addEventListener("click", () => {
-    track.scrollBy({ left: slideWidth(), behavior: "smooth" });
-  });
+      const placeholder =
+        timeSelect.querySelector('option[value=""]') || timeSelect.options[0];
 
-  // ===== SATURDAY TIME FILTER  =====
-  const daySelect = document.getElementById("daySelect");
-  const timeSelect = document.getElementById("timeSelect");
+      timeSelect.innerHTML = "";
 
-  const weekdayTimes = [
-    "7:00–8:00 AM",
-    "8:30–9:30 AM",
-    "10:00–11:00 AM",
-    "11:30–12:30 PM",
-    "2:30–3:30 PM",
-    "4:00–5:00 PM",
-    "5:30–6:30 PM"
-  ];
+      if (placeholder) {
+        placeholder.selected = true;
+        timeSelect.appendChild(placeholder);
+      } else {
+        const opt = document.createElement("option");
+        opt.value = "";
+        opt.disabled = true;
+        opt.selected = true;
+        opt.textContent = "Select";
+        timeSelect.appendChild(opt);
+      }
 
-  const saturdayTimes = [
-    "8:00–9:00 AM",
-    "9:30–10:30 AM",
-    "11:00–12:00 PM"
-  ];
-
-  function setTimeOptions(times) {
-    if (!timeSelect) return;
-
-    //  placeholder 
-    const placeholder =
-      timeSelect.querySelector('option[value=""]') || timeSelect.options[0];
-
-    timeSelect.innerHTML = "";
-    if (placeholder) {
-      placeholder.selected = true;
-      timeSelect.appendChild(placeholder);
-    } else {
-      const opt = document.createElement("option");
-      opt.value = "";
-      opt.disabled = true;
-      opt.selected = true;
-      opt.textContent = "Select";
-      timeSelect.appendChild(opt);
-    }
-
-    times.forEach((t) => {
-      const opt = document.createElement("option");
-      opt.value = t;
-      opt.textContent = t;
-      timeSelect.appendChild(opt);
-    });
-
-    timeSelect.value = "";
-  }
-
-  // Initialize time options and update when day changes
-  if (daySelect && timeSelect) {
-    // Default to weekday list on load
-    setTimeOptions(weekdayTimes);
-
-    daySelect.addEventListener("change", () => {
-      if (daySelect.value === "Saturday") setTimeOptions(saturdayTimes);
-      else setTimeOptions(weekdayTimes);
-    });
-  }
-
-  // ===== FORM: send to Supabase + Web3Forms =====
-  const SUPABASE_URL = "https://xbgmjvgjgdjqffkexedh.supabase.co";
-  const SUPABASE_ANON_KEY = "sb_publishable_RJw7uSo2pk4VsbWdL4X1LQ_qTcBObN9";
-
-  const form = document.getElementById("bookingForm");
-  const statusEl = document.getElementById("status");
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    statusEl.textContent = "Sending...";
-
-    const fd = new FormData(form);
-
-    const payload = {
-      name: String(fd.get("name") || ""),
-      email: String(fd.get("email") || ""),
-      phone: String(fd.get("phone") || ""),
-      day: String(fd.get("day") || ""),
-      time: String(fd.get("time") || ""),
-      address: String(fd.get("address") || ""),
-      notes: String(fd.get("notes") || "")
-    };
-
-    let supabaseOk = false;
-    let web3Ok = false;
-
-    // 1) Supabase insert
-    try {
-      const res = await fetch(`${SUPABASE_URL}/rest/v1/booking_requests`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "apikey": SUPABASE_ANON_KEY,
-          "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
-          "Prefer": "return=minimal"
-        },
-        body: JSON.stringify(payload)
+      times.forEach((time) => {
+        const opt = document.createElement("option");
+        opt.value = time;
+        opt.textContent = time;
+        timeSelect.appendChild(opt);
       });
 
-      supabaseOk = res.ok;
-      if (!res.ok) {
-        const t = await res.text().catch(() => "");
-        console.error("Supabase error:", res.status, t);
-      }
-    } catch (err) {
-      console.error("Supabase network error:", err);
+      timeSelect.value = "";
     }
 
-    // 2) Web3Forms submit (email delivery)
-    try {
-      const res = await fetch(form.action, {
-        method: "POST",
-        body: fd,
-        headers: { "Accept": "application/json" }
+    if (daySelect && timeSelect) {
+      setTimeOptions(weekdayTimes);
+
+      daySelect.addEventListener("change", () => {
+        if (daySelect.value === "Saturday") {
+          setTimeOptions(saturdayTimes);
+          return;
+        }
+
+        setTimeOptions(weekdayTimes);
       });
+    }
 
-      web3Ok = res.ok;
-      if (!res.ok) {
-        const t = await res.text().catch(() => "");
-        console.error("Web3Forms error:", res.status, t);
+    const SUPABASE_URL = "https://xbgmjvgjgdjqffkexedh.supabase.co";
+    const SUPABASE_ANON_KEY = "sb_publishable_RJw7uSo2pk4VsbWdL4X1LQ_qTcBObN9";
+
+    const form = document.getElementById("bookingForm");
+    const statusEl = document.getElementById("status");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      statusEl.textContent = "Sending...";
+
+      const fd = new FormData(form);
+
+      const payload = {
+        name: String(fd.get("name") || ""),
+        email: String(fd.get("email") || ""),
+        phone: String(fd.get("phone") || ""),
+        day: String(fd.get("day") || ""),
+        time: String(fd.get("time") || ""),
+        address: String(fd.get("address") || ""),
+        notes: String(fd.get("notes") || "")
+      };
+
+      let supabaseOk = false;
+      let web3Ok = false;
+
+      try {
+        const res = await fetch(`${SUPABASE_URL}/rest/v1/booking_requests`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "apikey": SUPABASE_ANON_KEY,
+            "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
+            "Prefer": "return=minimal"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        supabaseOk = res.ok;
+        if (!res.ok) {
+          const t = await res.text().catch(() => "");
+          console.error("Supabase error:", res.status, t);
+        }
+      } catch (err) {
+        console.error("Supabase network error:", err);
       }
-    } catch (err) {
-      console.error("Web3Forms network error:", err);
-    }
 
-    if (supabaseOk && web3Ok) {
-      statusEl.textContent = "Request sent. We’ll reach out to confirm your slot.";
-      form.reset();
+      try {
+        const res = await fetch(form.action, {
+          method: "POST",
+          body: fd,
+          headers: { "Accept": "application/json" }
+        });
 
-      // After reset, put weekday times back
-      if (daySelect && timeSelect) setTimeOptions(weekdayTimes);
-      return;
-    }
+        web3Ok = res.ok;
+        if (!res.ok) {
+          const t = await res.text().catch(() => "");
+          console.error("Web3Forms error:", res.status, t);
+        }
+      } catch (err) {
+        console.error("Web3Forms network error:", err);
+      }
 
-    if (supabaseOk && !web3Ok) {
-      statusEl.textContent = "Saved your request, but email delivery failed. Please try again.";
-      return;
-    }
+      if (supabaseOk && web3Ok) {
+        statusEl.textContent = "Request sent. We’ll follow up with current availability and confirm your consultation.";
+        form.reset();
 
-    if (!supabaseOk && web3Ok) {
-      statusEl.textContent = "Email sent, but saving to the schedule failed. Please try again.";
-      return;
-    }
+        if (daySelect && timeSelect) setTimeOptions(weekdayTimes);
+        return;
+      }
 
-    statusEl.textContent = "Something went wrong. Please try again.";
-  });
-</script>
+      if (supabaseOk && !web3Ok) {
+        statusEl.textContent = "Saved your request, but email delivery failed. Please try again.";
+        return;
+      }
 
+      if (!supabaseOk && web3Ok) {
+        statusEl.textContent = "Email sent, but saving to the schedule failed. Please try again.";
+        return;
+      }
+
+      statusEl.textContent = "Something went wrong. Please try again.";
+    });
+  </script>
 </body>
 </html>
