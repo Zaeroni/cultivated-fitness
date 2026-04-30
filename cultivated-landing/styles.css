@@ -1,18 +1,23 @@
 :root {
   --bg: #07070d;
   --bg-soft: #10111c;
-  --bg-card: rgba(14, 17, 29, 0.82);
-  --bg-card-strong: rgba(18, 22, 36, 0.92);
+  --bg-card: rgba(14, 17, 29, 0.86);
+  --bg-card-strong: rgba(18, 22, 36, 0.94);
   --text: #f6f2eb;
   --muted: #b4bac7;
-  --line: rgba(255, 255, 255, 0.08);
-  --line-strong: rgba(212, 160, 23, 0.28);
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(212, 160, 23, 0.3);
   --gold: #d4a017;
   --gold-strong: #b8870a;
   --gold-soft: rgba(212, 160, 23, 0.14);
-  --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
-  --shadow-soft: 0 14px 30px rgba(0, 0, 0, 0.24);
-  --radius: 28px;
+  --shadow: 0 18px 38px rgba(0, 0, 0, 0.24);
+  --shadow-soft: 0 12px 28px rgba(0, 0, 0, 0.2);
+  --radius: 18px;
+  --card-radius: 22px;
+  --card-padding: clamp(22px, 3vw, 28px);
+  --card-surface: rgba(15, 17, 27, 0.8);
+  --card-surface-strong: rgba(18, 21, 32, 0.9);
+  --card-highlight: radial-gradient(circle at 16% 0%, rgba(212, 160, 23, 0.12), transparent 34%);
 }
 
 * {
@@ -28,14 +33,13 @@ body {
   margin: 0;
   min-height: 100vh;
   color: var(--text);
-  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background:
     radial-gradient(circle at top, rgba(212, 160, 23, 0.18), transparent 28%),
     radial-gradient(circle at 85% 20%, rgba(255, 255, 255, 0.06), transparent 18%),
     linear-gradient(180deg, #06070d 0%, #090b14 42%, #06070d 100%);
   overflow-x: hidden;
 }
-
 
 body::before {
   content: "";
@@ -75,7 +79,7 @@ a {
   top: 0;
   z-index: 10;
   border-bottom: 1px solid var(--line);
-  background: rgba(7, 7, 13, 0.7);
+  background: rgba(7, 7, 13, 0.76);
   backdrop-filter: blur(18px);
 }
 
@@ -96,7 +100,7 @@ a {
 .brand__logo {
   width: 48px;
   height: 48px;
-  border-radius: 16px;
+  border-radius: 14px;
   object-fit: cover;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.04);
@@ -110,7 +114,7 @@ a {
 }
 
 .brand__name {
-  letter-spacing: 0.18em;
+  letter-spacing: 0.12em;
   font-size: 12px;
   font-weight: 900;
 }
@@ -128,8 +132,8 @@ a {
 }
 
 .nav a {
-  padding: 10px 14px;
-  border-radius: 999px;
+  padding: 10px 12px;
+  border-radius: 8px;
   color: rgba(255, 255, 255, 0.82);
   font-size: 14px;
   font-weight: 800;
@@ -149,23 +153,28 @@ a {
   align-items: center;
   justify-content: center;
   min-height: 50px;
-  padding: 12px 18px;
-  border: 1px solid transparent;
+  padding: 13px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.08);
   border-radius: 999px;
   font-size: 14px;
   font-weight: 900;
-  letter-spacing: 0.03em;
-  transition: transform 0.2s ease, filter 0.2s ease, background 0.2s ease;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
 }
 
 .btn:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 .btn--gold {
   color: #16110a;
   background: linear-gradient(180deg, var(--gold), var(--gold-strong));
   box-shadow: 0 14px 30px rgba(212, 160, 23, 0.25);
+}
+
+.btn--gold:hover {
+  box-shadow: 0 16px 34px rgba(212, 160, 23, 0.28);
 }
 
 .btn--large {
@@ -178,12 +187,12 @@ a {
 }
 
 .hero {
-  padding: 48px 0 24px;
+  padding: clamp(48px, 7vw, 84px) 0 clamp(28px, 5vw, 48px);
 }
 
 .heroGrid {
   display: grid;
-  gap: 28px;
+  gap: clamp(28px, 5vw, 58px);
   align-items: center;
 }
 
@@ -197,14 +206,15 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.04);
-  color: rgba(255, 255, 255, 0.86);
-  font-size: 12px;
+  padding: 8px 0;
+  border-radius: 0;
+  border: 0;
+  border-bottom: 3px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  font-size: 11px;
   font-weight: 900;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -221,6 +231,7 @@ h2,
 h3 {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
+  font-weight: 900;
 }
 
 .heroTitle {
@@ -229,6 +240,7 @@ h3 {
   line-height: 0.98;
   letter-spacing: -0.04em;
   max-width: 10ch;
+  text-transform: none;
 }
 
 .heroSub,
@@ -247,6 +259,7 @@ h3 {
   margin: 20px 0 0;
   max-width: 56ch;
   font-size: 18px;
+  color: var(--muted);
 }
 
 .heroActions {
@@ -255,10 +268,10 @@ h3 {
 
 .heroNote {
   margin: 18px 0 0;
-  color: #f0d089;
+  color: var(--gold);
   font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0.04em;
+  font-weight: 900;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -273,6 +286,7 @@ h3 {
 .methodCard,
 .resultCard,
 .testimonial,
+.faqItem,
 .stepCard,
 .faithCard,
 .form,
@@ -280,15 +294,42 @@ h3 {
 .coachCard,
 .pillCard {
   border: 1px solid var(--line);
-  background: var(--bg-card);
+  background:
+    var(--card-highlight),
+    var(--card-surface);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(14px);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.infoCard::after,
+.quoteCard::after,
+.resultCard::after,
+.testimonial::after,
+.faqItem::after,
+.stepCard::after,
+.heroStat::after,
+.pillCard::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 22px;
+  height: 22px;
+  border-top: 1px solid rgba(212, 160, 23, 0.36);
+  border-right: 1px solid rgba(212, 160, 23, 0.36);
+  opacity: 0.75;
+  pointer-events: none;
 }
 
 .heroVisual__media {
   overflow: hidden;
-  border-radius: 32px;
-  min-height: 340px;
+  border-radius: var(--card-radius);
+  min-height: 360px;
+  border: 1px solid rgba(212, 160, 23, 0.18);
+  background: rgba(5, 5, 8, 0.72);
 }
 
 .heroVisual__media img,
@@ -313,24 +354,35 @@ h3 {
 .heroStat {
   display: grid;
   gap: 6px;
+  min-height: 92px;
   padding: 18px 20px;
-  border-radius: 22px;
-  background: linear-gradient(180deg, rgba(22, 26, 42, 0.92), rgba(11, 13, 22, 0.9));
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--card-radius);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(212, 160, 23, 0.16), transparent 42%),
+    var(--card-surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  align-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .heroStat strong {
-  font-size: 18px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .heroStat span {
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.5;
+  font-size: 14px;
 }
 
 .section {
-  padding: 42px 0;
+  padding: clamp(54px, 7vw, 82px) 0;
 }
 
 .section--feature {
@@ -340,19 +392,20 @@ h3 {
 .section--feature::before {
   content: "";
   position: absolute;
-  inset: 20px 0;
-  background: linear-gradient(135deg, rgba(212, 160, 23, 0.08), transparent 55%);
+  inset: 0;
+  background: linear-gradient(90deg, rgba(212, 160, 23, 0.09), transparent 40%, rgba(255, 255, 255, 0.02));
   pointer-events: none;
 }
 
 .section--muted {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0));
+  background: rgba(255, 255, 255, 0.018);
+  border-block: 1px solid rgba(255, 255, 255, 0.045);
 }
 
 .sectionHead {
   display: grid;
-  gap: 14px;
-  margin-bottom: 24px;
+  gap: 12px;
+  margin-bottom: clamp(24px, 4vw, 34px);
   max-width: 780px;
 }
 
@@ -361,24 +414,32 @@ h3 {
 }
 
 h2 {
-  font-size: clamp(32px, 5vw, 52px);
-  line-height: 1.04;
+  font-size: clamp(32px, 4.6vw, 54px);
+  line-height: 1.06;
   letter-spacing: -0.03em;
+  text-transform: none;
 }
 
 .splitCard,
 .methodCard,
 .faithCard {
-  padding: clamp(24px, 4vw, 40px);
-  border-radius: var(--radius);
+  padding: clamp(26px, 4vw, 40px);
+  border-radius: var(--card-radius);
+}
+
+.methodCard {
+  background:
+    var(--card-highlight),
+    var(--card-surface-strong);
 }
 
 .splitCard {
   display: grid;
   gap: 24px;
   background:
-    linear-gradient(135deg, rgba(212, 160, 23, 0.12), transparent 50%),
-    var(--bg-card-strong);
+    linear-gradient(90deg, rgba(212, 160, 23, 0.2) 0 3px, transparent 3px),
+    var(--card-highlight),
+    var(--card-surface-strong);
 }
 
 .stackedCopy {
@@ -396,7 +457,7 @@ h2 {
 
 .cardGrid {
   display: grid;
-  gap: 18px;
+  gap: 16px;
 }
 
 .cardGrid--two {
@@ -411,9 +472,16 @@ h2 {
 .quoteCard,
 .resultCard,
 .testimonial,
+.faqItem,
 .stepCard {
-  padding: 24px;
-  border-radius: 24px;
+  padding: var(--card-padding);
+  border-radius: var(--card-radius);
+}
+
+.infoCard {
+  background:
+    var(--card-highlight),
+    var(--card-surface);
 }
 
 .infoCard--image {
@@ -424,18 +492,22 @@ h2 {
 
 .quoteCard {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   min-height: 100%;
   background:
-    linear-gradient(160deg, rgba(212, 160, 23, 0.16), rgba(255, 255, 255, 0.02)),
-    var(--bg-card);
+    linear-gradient(90deg, rgba(212, 160, 23, 0.5) 0 3px, transparent 3px),
+    var(--card-highlight),
+    var(--card-surface);
 }
 
 .quoteCard p {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 28px;
-  line-height: 1.25;
+  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: clamp(21px, 2.5vw, 25px);
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: none;
 }
 
 .list {
@@ -443,13 +515,13 @@ h2 {
   padding: 0;
   list-style: none;
   display: grid;
-  gap: 14px;
+  gap: 12px;
 }
 
 .list li {
   position: relative;
-  padding-left: 18px;
-  line-height: 1.7;
+  padding-left: 22px;
+  line-height: 1.6;
   color: var(--text);
 }
 
@@ -457,10 +529,10 @@ h2 {
   content: "";
   position: absolute;
   left: 0;
-  top: 11px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
+  top: 10px;
+  width: 10px;
+  height: 3px;
+  border-radius: 0;
   background: var(--gold);
 }
 
@@ -469,6 +541,29 @@ h2 {
   margin: 22px 0 0;
   font-size: 18px;
   color: var(--text);
+}
+
+#tried .infoCard:not(.infoCard--image) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(28px, 4vw, 42px);
+}
+
+#tried .infoCard:not(.infoCard--image) .list {
+  gap: clamp(16px, 2vw, 22px);
+}
+
+#tried .infoCard:not(.infoCard--image) .list li {
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.45;
+}
+
+#tried .infoCard:not(.infoCard--image) .closingLine {
+  margin-top: clamp(30px, 4vw, 46px);
+  font-size: clamp(20px, 2.2vw, 24px);
+  line-height: 1.35;
+  font-weight: 900;
 }
 
 .lead {
@@ -488,32 +583,38 @@ h2 {
 }
 
 .pillCard {
+  min-height: 82px;
   padding: 18px 20px;
-  border-radius: 18px;
-  font-weight: 800;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.025));
+  border-radius: var(--card-radius);
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  background: var(--card-surface);
 }
 
 .resultCard {
   min-height: 120px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   background:
-    linear-gradient(145deg, rgba(212, 160, 23, 0.14), rgba(255, 255, 255, 0.02)),
-    var(--bg-card);
+    var(--card-highlight),
+    var(--card-surface);
 }
 
 .resultCard span {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 28px;
-  line-height: 1.1;
+  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: clamp(21px, 2.4vw, 25px);
+  line-height: 1.18;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: none;
 }
 
 .coachCard {
   display: grid;
   gap: 0;
   overflow: hidden;
-  border-radius: 32px;
+  border-radius: var(--card-radius);
 }
 
 .coachCard__media {
@@ -522,31 +623,94 @@ h2 {
 
 .coachCard__content {
   padding: clamp(24px, 4vw, 38px);
-  background: linear-gradient(180deg, rgba(16, 18, 29, 0.95), rgba(9, 11, 19, 0.98));
+  background:
+    radial-gradient(circle at 0% 0%, rgba(212, 160, 23, 0.08), transparent 34%),
+    rgba(12, 14, 23, 0.9);
 }
 
 .testimonial {
   display: grid;
   gap: 16px;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 14% 0%, rgba(212, 160, 23, 0.14), transparent 38%),
+    var(--card-surface);
+}
+
+.testimonial::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: rgba(212, 160, 23, 0.72);
 }
 
 .testimonial__eyebrow {
   justify-self: start;
   color: #f1d89a;
+  margin-bottom: 2px;
 }
 
 .testimonial__text {
   margin: 0;
   font-style: italic;
-  line-height: 1.85;
-  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.68;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.testimonial__headline {
+  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  min-height: 56px;
+  display: flex;
+  align-items: flex-start;
+  font-size: clamp(20px, 2.1vw, 22px);
+  line-height: 1.18;
+  letter-spacing: -0.018em;
+  font-weight: 900;
+  color: var(--gold);
+  text-transform: none;
+  margin-bottom: 2px;
 }
 
 .testimonial__name {
-  margin: 0;
+  margin: 2px 0 0;
   color: var(--gold);
   font-weight: 900;
   letter-spacing: 0.04em;
+  align-self: end;
+}
+
+.faqList {
+  display: grid;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.faqItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background:
+    var(--card-highlight),
+    var(--card-surface);
+  border-left: 3px solid rgba(212, 160, 23, 0.68);
+}
+
+.faqItem h3 {
+  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: clamp(18px, 2vw, 21px);
+  line-height: 1.22;
+  letter-spacing: -0.015em;
+  font-weight: 900;
+}
+
+.faqItem p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  line-height: 1.62;
 }
 
 .steps {
@@ -558,31 +722,38 @@ h2 {
 .stepCard {
   min-height: 170px;
   display: grid;
+  gap: 22px;
   align-content: space-between;
+  background:
+    var(--card-highlight),
+    var(--card-surface);
 }
 
 .stepCard__number {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: var(--gold-soft);
-  color: #f6d68b;
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: var(--gold);
+  color: #090909;
   font-size: 18px;
   font-weight: 900;
 }
 
 .stepCard h3 {
-  font-size: 26px;
-  line-height: 1.15;
+  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1.22;
+  letter-spacing: -0.018em;
 }
 
 .faithCard {
   background:
-    linear-gradient(160deg, rgba(212, 160, 23, 0.12), transparent 54%),
-    var(--bg-card-strong);
+    linear-gradient(90deg, rgba(212, 160, 23, 0.2) 0 3px, transparent 3px),
+    var(--card-highlight),
+    var(--card-surface-strong);
 }
 
 .finalCta {
@@ -602,7 +773,7 @@ h2 {
 
 .form {
   padding: 24px;
-  border-radius: 28px;
+  border-radius: var(--card-radius);
 }
 
 .form__title {
@@ -690,6 +861,11 @@ select {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .faqList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+  }
+
   .steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -730,6 +906,21 @@ select {
   }
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .infoCard:hover,
+  .quoteCard:hover,
+  .resultCard:hover,
+  .testimonial:hover,
+  .faqItem:hover,
+  .stepCard:hover,
+  .pillCard:hover,
+  .heroStat:hover {
+    transform: translateY(-3px);
+    border-color: rgba(212, 160, 23, 0.22);
+    box-shadow: 0 22px 46px rgba(0, 0, 0, 0.3);
+  }
+}
+
 @media (max-width: 979px) {
   .topbar__actions {
     display: none;
@@ -749,22 +940,43 @@ select {
   body::before {
     background-size: auto, min(420px, 82vw);
     background-position: center 14%;
+    opacity: 0.08;
   }
 
   .container {
     width: min(100% - 24px, 1180px);
   }
 
+  .topbar__inner {
+    padding: 12px 0;
+  }
+
+  .brand__tag {
+    display: none;
+  }
+
   .hero {
-    padding-top: 32px;
+    padding-top: 36px;
   }
 
   .section {
-    padding: 34px 0;
+    padding: 46px 0;
   }
 
   .heroTitle {
     max-width: none;
+  }
+
+  .heroVisual__panel {
+    grid-template-columns: 1fr;
+  }
+
+  .heroStat {
+    padding: 14px 16px;
+  }
+
+  .testimonial__headline {
+    min-height: auto;
   }
 
   .btn,
